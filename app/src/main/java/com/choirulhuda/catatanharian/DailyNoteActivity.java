@@ -51,7 +51,9 @@ public class DailyNoteActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            setTitle(extras.getString(GlobalVariable.CATATAN_HARIAN));
+            String judul = extras.getString(GlobalVariable.CATATAN_HARIAN);
+            int nilaiBaru = extras.getInt(GlobalVariable.NILAI, 0);
+            setTitle(judul+" "+nilaiBaru);
         }
     }
 
